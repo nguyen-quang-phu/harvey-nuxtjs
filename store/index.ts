@@ -9,8 +9,10 @@ export interface RootState {
   auth: AuthState;
 }
 
-export const store = new Store({
-  modules: {
-    auth: authModule,
-  },
-});
+export default function () {
+  return new Store({
+    modules: {
+      auth: authModule,
+    },
+  });
+}
